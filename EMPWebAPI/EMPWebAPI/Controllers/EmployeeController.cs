@@ -19,7 +19,7 @@ namespace EMPWebAPI.Controllers
             DataTable table = new DataTable();
 
             string query = @"
-                           select * from 
+                           select Code, Initials, Firstname, Surname, EmpAddress, convert(varchar(10), DOB, 120) as DOB, EmpStatus from 
                            EmpDetails";
 
             using (var con = new SqlConnection(ConfigurationManager.ConnectionStrings["EmployeeAppDB"].ConnectionString))
